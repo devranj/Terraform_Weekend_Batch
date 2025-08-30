@@ -1,10 +1,3 @@
-1. What is the purpose of this codebase? (e.g., provisioning AWS infrastructure, GCP, Azure, etc.)
-2. What services/resources does it manage? (e.g., EC2, S3, VPC, etc.)
-3. Is it structured for beginners, or does it assume prior Terraform experience?
-4. Do you want any prerequisites mentioned (like Terraform version, cloud credentials)?
-5. Do you want it structured for learners following a batch/training schedule?
-
-
 # Terraform Weekend Batch
 
 This repository contains Terraform code designed for weekend training sessions or bootcamps focused on Infrastructure as Code (IaC) using Terraform. It is structured for learners who want hands-on experience with provisioning and managing cloud infrastructure.
