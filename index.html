@@ -1,0 +1,77 @@
+DNA Code in HTML
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>DNA Helix Scroll</title>
+  <style>
+    body {
+      background-color: black;
+      color: lime;
+      font-family: monospace;
+      text-align: center;
+    }
+    #dna {
+      white-space: pre;
+      margin-top: 20px;
+      font-size: 22px;
+    }
+  </style>
+</head>
+<body>
+  <h1>DNA Helix Animation</h1>
+  <div id="dna"></div>
+
+  <script>
+    const rows = [
+      '       ##       ',
+      '      #{}--{}#      ',
+      '     #{}----{}#     ',
+      '    #{}------{}#    ',
+      '   #{}------{}#   ',
+      '    #{}------{}#    ',
+      '     #{}----{}#     ',
+      '      #{}--{}#      ',
+      '       ##       ',
+      '      #{}--{}#      ',
+      '     #{}----{}#     ',
+      '    #{}------{}#    ',
+      '   #{}------{}#   ',
+      '    #{}------{}#    ',
+      '     #{}----{}#     ',
+      '      #{}--{}#      '
+    ];
+
+    const nucleotides = [
+      ['A', 'T'], ['T', 'A'], ['C', 'G'], ['G', 'C']
+    ];
+
+    let index = 0;
+    const dnaDiv = document.getElementById('dna');
+
+    function updateDNA() {
+      const row = rows[index];
+      let line;
+      if (row.includes('{}')) {
+        const pair = nucleotides[Math.floor(Math.random() * nucleotides.length)];
+        line = row.replace('{}', pair[0]).replace('{}', pair[1]);
+      } else {
+        line = row;
+      }
+
+      dnaDiv.textContent += line + '\n';
+
+      index = (index + 1) % rows.length;
+
+      // Optional: Limit lines to avoid infinite scroll
+      const lines = dnaDiv.textContent.split('\n');
+      if (lines.length > 40) {
+        dnaDiv.textContent = lines.slice(-40).join('\n');
+      }
+    }
+
+    setInterval(updateDNA, 150);
+  </script>
+</body>
+</html>
