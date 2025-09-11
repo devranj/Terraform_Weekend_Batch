@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="terraform_1.12.1_windows_386">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/terraform_1.12.1_windows_386.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
