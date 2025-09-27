@@ -98,7 +98,7 @@ resource "aws_instance" "webserver2" {
 }
 
 #create alb
-resource "aws_lb" "myalb" {
+resource "aws_lb" "myalb1" {
   name               = "myalb"
   internal           = false
   load_balancer_type = "application"
